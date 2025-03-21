@@ -7,7 +7,7 @@
 /* 
  * add_to_format(char c) 함수
  *
- * 입력받은 문자를 포맷에 추가합니다.
+ * 입력받은 문자를 포맷에 추가합니다. (포맷: "%d123abc%c",0,0 ---> "0123abc")
  * 현재 포맷에 문자가 10개였으면, 에러 메시지 출력 후 포맷을 초기화합니다.
  * 
  * 매개변수: 
@@ -52,7 +52,13 @@ char input_char();
 
 int main() {
 	/* To Do: 주어진 함수들을 활용해서 문자 하나를 입력받고, 문자 형식과 숫자 형식으로 출력해보세요 */
-
+	char c = input_char();
+	add_to_format('%');
+	add_to_format('c');
+	add_to_format(':');
+	add_to_format('%');
+	add_to_format('d');
+	print_formatted(c, c);
 	
 	return 0;
 }
